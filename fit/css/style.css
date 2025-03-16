@@ -1,0 +1,257 @@
+/* Сброс базовых отступов */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Стили body */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Контейнер шапки */
+.head {
+  display: flex;                 /* Горизонтальный флекс-контейнер */
+  align-items: center;           /* Вертикальное выравнивание по центру */
+  justify-content: space-between;/* Распределение пространства между блоками */
+  background-color: #3439c975;        /* фон */
+  color: #fff;                   /* Белый текст */
+  padding: 10px 20px;            /* Внутренние отступы */
+}
+
+/* Стили для каждого списка (левая, центральная, правая часть) */
+.menu_logo, .menu, .menu_icon {
+  list-style: none;              /* Убираем маркеры списка */
+  display: flex;                 /* Элементы в строку */
+  align-items: center;
+  gap: 15px;                     /* Расстояние между элементами */
+}
+
+/* Название и слоган */
+.title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.tagline {
+  font-size: 14px;
+  opacity: 0.8;                  /* Чтобы текст был чуть светлее */
+}
+
+/* Ссылки */
+.menu a, .menu_icon a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.menu a:hover, .menu_icon a:hover {
+  color: #ccc;
+}
+
+/* Изображения в списках (логотип, иконки) */
+.menu_logo img,
+.menu_icon img {
+  width: 24px;       /* Примерный размер, меняйте по вкусу */
+  height: 24px;
+  object-fit: contain;
+}
+/* Полоса поиска */
+.search-bar {
+  display: flex;
+  justify-content: center; /* По центру по горизонтали */
+  align-items: center;     /* Выравнивание по вертикали */
+  background-color: #3439c975;
+  padding: 10px 20px;
+  gap: 10px;              /* Отступ между инпутом и кнопкой */
+}
+
+.search-bar input {
+  width: 300px;           /* Ширина поля */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: px;
+}
+
+.search-bar button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #222;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.search-bar button:hover {
+  background-color: #444;
+}
+.search-bar .filter-btn {
+  background-color: #555;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-bar .filter-btn:hover {
+  background-color: #777;
+}
+/* Общий контейнер */
+.fitness-centers {
+  text-align: center; /* Выравнивание заголовка */
+  padding: 20px;
+}
+
+.fitness-centers h2 {
+  margin-bottom: 20px;
+}
+
+.fitness-card {
+  width: 250px; /* Фиксированная ширина карточки */
+  background-color: #5d75cd; /* Цвет фона */
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+  padding-bottom: 15px;
+}
+
+.fitness-card img {
+  width: 85%; /* Изображение занимает всю ширину карточки */
+  height: 155px; /* Фиксированная высота */
+  object-fit: cover; /* Обрезка для сохранения пропорций */
+  border-radius: 20px 20px 0 0; /* Округление только сверху */
+  top: 15px;
+  transition: opacity 1s ease-in-out; /* Плавное изменение прозрачности */
+}
+
+
+.card-content {
+  padding: 15px;
+  
+}
+
+.card-content h3 {
+  margin: 10px 0;
+}
+
+.card-content p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e6b800;
+}
+
+/* Расположение карточек в ряд */
+.fitness-centers {
+  display: flex;
+  justify-content: center; /* Центрируем карточки */
+  gap: 20px; /* Отступы между карточками */
+}
+.fitness-centers-wrapper {
+  text-align: center; /* Выравнивание заголовка */
+  margin-bottom: 20px; /* Отступ вниз перед карточками */
+}
+
+.fitness-centers {
+  display: flex;
+  justify-content: center; /* Центрируем карточки */
+  gap: 20px; /* Расстояние между карточками */
+}
+
+/* Делаем заголовок больше и жирнее */
+.fitness-card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  background: #5b6bc2; /* Цвет фона для наглядности */
+  border-radius: 20px; /* Скруглённые углы */
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-img {
+  position: absolute;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  transition: opacity 0.9s ease-in-out;
+  opacity: 0;
+}
+
+.slider-img.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.slider-img.next {
+  opacity: 0.6;
+  z-index: 1;
+}
+.map-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+footer {
+  background-color: #3439c975; /* Цвет фона */
+  color: white; /* Цвет текста */
+  padding: 20px 0; /* Отступы сверху и снизу */
+  text-align: center;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contacts a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.contacts a:hover {
+  color: #f4a261; /* Цвет при наведении */
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .contacts {
+      margin-top: 10px;
+  }
+}
